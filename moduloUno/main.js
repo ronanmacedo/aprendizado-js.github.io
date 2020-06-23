@@ -76,8 +76,9 @@ experiencia(anosEstudo);
 /* exercício 5 */
 function escrever(vetores) {
     for (var vetor of vetores) {
-        document.write("O " + vetor.nome + " possui as habilidades: " + vetor.habilidades.join(", ") + "\n");
-        console.log("O " + vetor.nome + " possui as habilidades: " + vetor.habilidades.join() + "\n");  
+        var writeSection = `O ${vetor.nome} possui as habilidades: ${vetor.habilidades.join(", ")}`;
+        document.write(`${writeSection} `);
+        console.log(writeSection);  
     }
 }   
 
