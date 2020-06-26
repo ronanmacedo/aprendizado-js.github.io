@@ -24,7 +24,7 @@ btnUno.onclick = function () {
     var box = document.querySelector('.boxUno');
     sqr.style.height = '100px';
     sqr.style.width = '100px';
-    sqr.style.margin = '.5em 0 .5em 0';
+    sqr.style.margin = '.5em .25em .5em .25em';
     sqr.style.backgroundColor = '#ff0000';
     box.appendChild(sqr);
 }
@@ -60,14 +60,52 @@ btnDois.onclick = function () {
     var box = document.querySelector('.boxDois');
     sqr.style.height = '100px';
     sqr.style.width = '100px';
-    sqr.style.margin = '.5em 0 .5em 0';
+    sqr.style.margin = '.5em .25em .5em .25em';
     sqr.style.backgroundColor = '#ff0000';
     sqr.onmouseout = function () {
         sqr.style.backgroundColor = getRandomColor();
     }
     box.appendChild(sqr);
 }
+/**
+ * Exercicio tres
+ */
+var containerTres = document.querySelector('#exercicioTres');
+var listContainerTres = document.createElement('ul');
+containerTres.appendChild(listContainerTres);
 
+var nomes = ["Diego", "Gabriel", "Lucas"];
+
+for (nome of nomes) {
+    var listItem = document.createElement('li');
+    listItem.innerHTML = nome;
+    listContainerTres.appendChild(listItem);
+}
+/**
+ * Exercicio quatro
+ */
+var containerQuatro = document.querySelector('#exercicioQuatro');
+var listContainerQuatro = document.createElement('ul');
+containerQuatro.appendChild(listContainerQuatro);
+var inputElement = document.querySelector('.inputName');
+
+var nomesOutro = ["Diego", "Gabriel", "Lucas"];
+
+function addName(name) {
+    var listItem = document.createElement('li');
+    listItem.innerHTML = name;
+
+    listContainerQuatro.appendChild(listItem)
+}
+
+function adicionar() {
+    addName(inputElement.value);
+    inputElement.value = "";
+}
+
+for (nome of nomesOutro) {
+    addName(nome);
+}
 /**
  * Criando link para retornar ao menu principal
  */

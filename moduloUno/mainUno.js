@@ -87,15 +87,15 @@ experiencia(anosEstudo);
  * exercício 5 
  */
 function escrever(vetores) {
-    for (var vetor of vetores) {
+    for (vetor of vetores) {
         var writeSection = `O ${vetor.nome} possui as habilidades: ${vetor.habilidades.join(", ")}`;
         var para = document.createElement('p');
         para.innerHTML = writeSection;
         var divSelector = document.querySelector('#exercicioCinco');
         divSelector.appendChild(para);
-        console.log(writeSection);  
+        console.log(writeSection);
     }
-}   
+}
 
 var usuarios = [
     {
