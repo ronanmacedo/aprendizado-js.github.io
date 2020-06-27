@@ -67,6 +67,7 @@ btnDois.onclick = function () {
     }
     box.appendChild(sqr);
 }
+
 /**
  * Exercicio tres
  */
@@ -81,6 +82,7 @@ for (nome of nomes) {
     listItem.innerHTML = nome;
     listContainerTres.appendChild(listItem);
 }
+
 /**
  * Exercicio quatro
  */
@@ -93,6 +95,7 @@ var nomesOutro = ["Diego", "Gabriel", "Lucas"];
 
 function addName(name) {
     var listItem = document.createElement('li');
+    listItem.setAttribute('id', name);
     listItem.innerHTML = name;
 
     listContainerQuatro.appendChild(listItem)
@@ -101,6 +104,17 @@ function addName(name) {
 function adicionar() {
     addName(inputElement.value);
     inputElement.value = "";
+}
+
+function remover() {
+    var listItem = document.querySelector(`#${inputElement.value}`);
+    if (listItem) {
+        listContainerQuatro.removeChild(listItem);
+        inputElement.value = "";
+    } else {
+        window.alert("Nome não encontrado");
+        inputElement.value = "";
+    }
 }
 
 for (nome of nomesOutro) {
