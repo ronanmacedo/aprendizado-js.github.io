@@ -11,7 +11,6 @@ container.appendChild(listContainer);
 var linkElementUno = document.createElement('a');
 linkElementUno.setAttribute('href', 'moduloUno/modUno.html');
 linkElementUno.innerHTML = "Acessar primeiro módulo";
-linkElementUno.style.textDecoration = 'none';
 
 var listItemUno = document.createElement('li');
 listItemUno.appendChild(linkElementUno);
@@ -23,8 +22,18 @@ listContainer.appendChild(listItemUno);
 var linkElementDois = document.createElement('a');
 linkElementDois.setAttribute('href', 'moduloDois/modDois.html');
 linkElementDois.innerHTML = "Acessar segundo módulo";
-linkElementDois.style.textDecoration = 'none';
 
 var listItemDois = document.createElement('li');
 listItemDois.appendChild(linkElementDois);
 listContainer.appendChild(listItemDois);
+
+/**
+ * Terceiro link
+ */
+var linkElementTres = document.createElement('a');
+linkElementTres.setAttribute('href', 'moduloTres/modTres.html');
+linkElementTres.innerHTML = "Acessar terceiro módulo";
+
+var listItemTres = document.createElement('li');
+listItemTres.appendChild(linkElementTres);
+listContainer.appendChild(listItemTres);

@@ -19,6 +19,7 @@ classUno.setAttribute('class', 'boxUno');
 appUno.appendChild(classUno);
 containerUno.appendChild(appUno);
 
+// pode se utilizar 'elemento.acao = function () { }' sem necessariamente declarar ela no html
 btnUno.onclick = function () {
     var sqr = document.createElement('div');
     var box = document.querySelector('.boxUno');
@@ -62,6 +63,7 @@ btnDois.onclick = function () {
     sqr.style.width = '100px';
     sqr.style.margin = '.5em .25em .5em .25em';
     sqr.style.backgroundColor = '#ff0000';
+    // Alterar a cor dentro da própria função por default
     sqr.onmouseout = function () {
         sqr.style.backgroundColor = getRandomColor();
     }
@@ -77,6 +79,7 @@ containerTres.appendChild(listContainerTres);
 
 var nomes = ["Diego", "Gabriel", "Lucas"];
 
+// Podesse interar os objetos de um vetor sem precisar esta dentro de uma função
 for (nome of nomes) {
     var listItem = document.createElement('li');
     listItem.innerHTML = nome;
@@ -106,6 +109,8 @@ function adicionar() {
     inputElement.value = "";
 }
 
+
+// Função adicionada por critério próprio
 function remover() {
     var listItem = document.querySelector(`#${inputElement.value}`);
     if (listItem) {

@@ -14,6 +14,7 @@ var endereco = {
     uf: "SP"
 };
 
+// Ver explicação nas linhas 92 a 96
 var texto = `O usuário mora em ${endereco.cidade} / ${endereco.uf}, no bairro ${endereco.bairro}, na ${endereco.rua} com n° ${endereco.numero}`;
 var para = document.createElement('p');
 para.innerHTML = texto;
@@ -25,6 +26,7 @@ divSelector.appendChild(para);
  */
 function encontraPar(x, y) {
     var intervalo = " ", j = x;
+    // Utilizar 'while' quando não se sabe quantos elemento será necessário interar
     while (j < y) {
         if (j % 2 == 0) {
             intervalo += j + " ";
@@ -88,6 +90,11 @@ experiencia(anosEstudo);
  */
 function escrever(vetores) {
     for (vetor of vetores) {
+        /*
+        Ao utilizar ` ` ao invés de " ", não é necessário utilizar o '+' toda vez que necessitar
+        concatenar uma nova informação, bastando usar '${interador.objeto.funcaoOpcional}' toda
+        a vez que precisar concatenar informações
+        */
         var writeSection = `O ${vetor.nome} possui as habilidades: ${vetor.habilidades.join(", ")}`;
         var para = document.createElement('p');
         para.innerHTML = writeSection;
