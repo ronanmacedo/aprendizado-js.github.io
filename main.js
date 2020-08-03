@@ -37,3 +37,14 @@ linkElementTres.innerHTML = "Acessar terceiro módulo";
 var listItemTres = document.createElement('li');
 listItemTres.appendChild(linkElementTres);
 listContainer.appendChild(listItemTres);
+
+/**
+ * Terceiro link
+ */
+var linkElementQuatro = document.createElement('a');
+linkElementQuatro.setAttribute('href', 'moduloQuatro/modQuatro.html');
+linkElementQuatro.innerHTML = "Acessar quarto módulo";
+
+var listItemQuatro = document.createElement('li');
+listItemQuatro.appendChild(linkElementQuatro);
+listContainer.appendChild(listItemQuatro);
